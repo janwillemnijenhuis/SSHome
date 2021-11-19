@@ -1,0 +1,55 @@
+
+d
+java:S1845Û"MRename method "eoln" to prevent any misunderstanding/clash with field "EOLN".(òÁ»
+b
+java:S1845ä"KRename method "eof" to prevent any misunderstanding/clash with field "EOF".(¾şãÙ
+v
+java:S1149Ÿ"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ÒóÓ
+{
+java:S1149ª"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(ë§ñ„øÿÿÿÿ
+U
+java:S1118 ":Add a private constructor to hide the implicit public one.(Äş¢†ıÿÿÿÿ
+`
+java:S1124+"EReorder the modifiers to comply with the Java Language Specification.(ıÀõœÿÿÿÿÿ
+`
+java:S11241"EReorder the modifiers to comply with the Java Language Specification.(Ö·âÒúÿÿÿÿ
+C	java:S108?")Either remove or fill this block of code.(ñ“Š±üÿÿÿÿ
+D	java:S108ƒ")Either remove or fill this block of code.(ñ“Š±üÿÿÿÿ
+D	java:S108™")Either remove or fill this block of code.(ñ“Š±üÿÿÿÿ
+D	java:S108Ş")Either remove or fill this block of code.(ñ“Š±üÿÿÿÿ
+]
+java:S3457˜"AFormat specifiers should be used instead of string concatenation.(Õôíèûÿÿÿÿ
+a
+java:S1124Ù"EReorder the modifiers to comply with the Java Language Specification.(Ú•Ïëÿÿÿÿÿ
+a
+java:S1124Ú"EReorder the modifiers to comply with the Java Language Specification.(¦¦›øüÿÿÿÿ
+T	java:S106Ú"9Replace this use of System.out or System.err by a logger.(¦¦›øüÿÿÿÿ
+\
+java:S1124ç"EReorder the modifiers to comply with the Java Language Specification.(÷±ÛÜ
+G
+java:S6035ç"0Replace this alternation with a character class.(÷±ÛÜ
+\
+java:S1124è"EReorder the modifiers to comply with the Java Language Specification.(Õ–Ò§
+G
+java:S6035è"0Replace this alternation with a character class.(Õ–Ò§
+G
+java:S6035è"0Replace this alternation with a character class.(Õ–Ò§
+G
+java:S6035è"0Replace this alternation with a character class.(Õ–Ò§
+`
+java:S1858–"D"s" is already a string, there's no need to call "toString()" on it.(«ô¸Úúÿÿÿÿ
+T	java:S106÷"9Replace this use of System.out or System.err by a logger.(“‚®Åøÿÿÿÿ
+k
+java:S5843è"TSimplify this regular expression to reduce its complexity from 27 to the 20 allowed.(Õ–Ò§
+r
+java:S1192“"VDefine a constant instead of duplicating this literal "Integer in the range " 3 times.(æşóÇüÿÿÿÿ
+v
+java:S1192ç"ZDefine a constant instead of duplicating this literal "Real number in the range " 6 times.(–‡•Æıÿÿÿÿ
+s
+java:S1192†"\Define a constant instead of duplicating this literal "Error while writing output." 6 times.(İ¢Áæ
+t	java:S135ã"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+t	java:S135†"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+t	java:S135¾"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+t	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
+x
+java:S4165É"aRemove this useless assignment; "ans" already holds the assigned value along all execution paths.(ø—ú

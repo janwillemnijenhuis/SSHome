@@ -1,0 +1,11 @@
+
+[
+java:S1854"@Remove this useless assignment to local variable "averageGrade".(ì’°Òøÿÿÿÿ
+;
+java:S2129" Remove this "String" constructor(ÀÕÈãşÿÿÿÿ
+W
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ôƒëª
+N	java:S106&"9Replace this use of System.out or System.err by a logger.(‹Ï†î
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(­¡Äûÿÿÿÿ
+[
+java:S2095"EUse try-with-resources or close this "Scanner" in a "finally" clause.(áşÉÙ
