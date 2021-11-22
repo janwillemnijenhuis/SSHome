@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class ThreeWayLamp {
 
     private State LampSetting;
-    private final State defaultState = State.OFF;
+    private static final State defaultState = State.OFF;
     private boolean exit = false;
 
     //@ private invariant defaultState == State.OFF;

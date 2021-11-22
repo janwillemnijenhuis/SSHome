@@ -16,7 +16,7 @@ public class Student {
 		System.out.format("%b%n", passed());
 	}
 
-	public static boolean passed () {
+	public static boolean passed() {
 		boolean pass = score >= CRITERION;
 	    return pass;
 	}
