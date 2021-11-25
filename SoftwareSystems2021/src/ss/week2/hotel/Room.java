@@ -16,6 +16,7 @@ public class Room {
     public Room(int number, Safe safe) {
         this.number = number;
         this.safe = safe;
+        this.guest = null;
     }
 
     /**
@@ -30,7 +31,7 @@ public class Room {
      * @return the guest of this Room, null if not rented
      */
     public Guest getGuest() {
-    	return guest;
+    	return this.guest;
     }
 
 
@@ -44,6 +45,10 @@ public class Room {
 
     public String toString() {
         return "Room " + this.number;
+    }
+
+    public Safe getSafe() {
+        return this.safe;
     }
 
 }

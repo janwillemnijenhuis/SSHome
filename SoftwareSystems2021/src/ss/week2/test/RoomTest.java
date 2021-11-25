@@ -34,7 +34,6 @@ public class RoomTest {
     @Test
     public void testSafe() {
         Safe safe = new Safe();
-        assertEquals(room.safe.getClass(), safe.getClass());
+        assertEquals(room.safe, room.getSafe());
     }
-
 }

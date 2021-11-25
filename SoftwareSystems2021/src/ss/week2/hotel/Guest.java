@@ -62,6 +62,7 @@ public class Guest {
         }
         else {
             room.setGuest(null);
+            room.getSafe().deactivate();
             this.room = null;
             return true;
         }
