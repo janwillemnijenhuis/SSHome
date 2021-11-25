@@ -11,27 +11,18 @@ public class ThreeWayLampTest {
 
     private static ThreeWayLamp threeWayLamp;
 
-    public static void main(String[] args) {
-        ThreeWayLampTest test = new ThreeWayLampTest();
-        test.runTest();
-    }
-
-    static void runTest(){
-        setUp();
-        getDefaultSettingTest();
-        nextSwitchesCorrectlyTest();
-    }
-
-    static void setUp() {
+    @BeforeEach
+    public void setUp() {
         threeWayLamp = new ThreeWayLamp();
     }
 
-    static void getDefaultSettingTest() {
+    @Test
+    public void getDefaultSettingTest() {
         // check if the current state is the default state (OFF)
         assertEquals(threeWayLamp.getState(), State.OFF);
     }
-
-    static void nextSwitchesCorrectlyTest() {
+    @Test
+    public void nextSwitchesCorrectlyTest() {
         // check if the state is successfully switched from OFF to LOW
         threeWayLamp.setNext();
         assertEquals(threeWayLamp.getState(), State.LOW);

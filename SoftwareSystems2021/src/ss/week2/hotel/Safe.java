@@ -1,8 +1,8 @@
 package ss.week2.hotel;
 
 public class Safe {
-    private static boolean activated;
-    private static boolean opened;
+    private boolean activated;
+    private boolean opened;
 
     public Safe() {
         this.activated = false;
