@@ -4,53 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d08c034f-b272-4375-9d3d-cce60d3ab3f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/bill/Bill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/bill/Printer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/bill/Printer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/bill/StringPrinter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/bill/StringPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/bill/SysoutPrinter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/bill/SysoutPrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/hotel/PricedSafe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/hotel/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/hotel/Safe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/password/BasicPassword.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/password/BasicPassword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/password/Checker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/password/Password.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/test/BasicPasswordTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/test/BillTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/test/HotelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/test/PricedRoomTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ss/week3/test/PricedSafeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/061bb7a893e8b221f522cb41d7d53cc9bd4468a4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75e36586941112e1da70a0f686ec1773f4ff8769" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/dee7729fe69dea87d8bdd8ee13afd83c4f52e609" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/dee7729fe69dea87d8bdd8ee13afd83c4f52e609" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/allclasses.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allclasses.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/deprecated-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/member-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/member-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/package-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/package-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/ss/week2/hotel/Guest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/ss/week2/hotel/Guest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/ss/week2/hotel/class-use/Guest.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/ss/week2/hotel/class-use/Guest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/ss/week2/hotel/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/ss/week2/hotel/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/ss/week2/hotel/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/ss/week2/hotel/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/ss/week2/hotel/package-use.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/ss/week2/hotel/package-use.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/type-search-index.zip" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/type-search-index.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss/week2/PairOfDice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week2/PairOfDice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss/week2/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week2/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ss/week2/test/RoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week2/test/RoomTest.java" afterDir="false" />
+    <list default="true" id="3c2628cc-098d-41cc-be59-611f04274043" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ss/week3/hotel/Guest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss/week3/hotel/Hotel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss/week3/hotel/HotelTUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss/week3/hotel/PricedRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ss/week3/password/TimedPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/bill/Bill.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/bill/Bill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/bill/Printer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/bill/Printer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/bill/StringPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/bill/StringPrinter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/bill/SysoutPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/bill/SysoutPrinter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/hotel/PricedSafe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/hotel/PricedSafe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/hotel/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/hotel/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/test/PricedSafeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SoftwareSystems2021/ss/week3/test/PricedSafeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/bill/Bill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/bill/Bill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/bill/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/bill/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/bill/StringPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/bill/StringPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/bill/SysoutPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/bill/SysoutPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/hotel/PricedSafe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/hotel/PricedSafe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/hotel/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/hotel/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/test/BillTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/test/BillTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/test/HotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/test/HotelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/test/PricedRoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/test/PricedRoomTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ss/week3/test/PricedSafeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ss/week3/test/PricedSafeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +74,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../rust-lang" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -114,8 +91,11 @@
       <recent name="C:\Users\janwillem.nijenhuis\Documents\SSHome\SoftwareSystems2021\src\ss\week1" />
       <recent name="C:\Users\janwillem.nijenhuis\Documents\SSHome\SoftwareSystems2021\src" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ss.week3.hotel" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.PricedSafeTest">
+  <component name="RunManager" selected="Application.TimedPassword">
     <configuration name="Hello" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ss.week1.GrossAndDozens" />
       <module name="SoftwareSystems2021" />
@@ -130,7 +110,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HotelTUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss.week3.hotel.HotelTUI" />
+      <module name="SoftwareSystems2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss.week3.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimedPassword" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss.week3.password.TimedPassword" />
+      <module name="SoftwareSystems2021" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss.week3.password.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HotelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareSystems2021" />
       <extension name="coverage">
         <pattern>
@@ -139,13 +145,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ss.week3.test" />
-      <option name="MAIN_CLASS_NAME" value="ss.week3.test.BillTest" />
+      <option name="MAIN_CLASS_NAME" value="ss.week3.test.HotelTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BillTest.testInsertedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PricedRoomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareSystems2021" />
       <extension name="coverage">
         <pattern>
@@ -154,9 +160,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ss.week3.test" />
-      <option name="MAIN_CLASS_NAME" value="ss.week3.test.BillTest" />
-      <option name="METHOD_NAME" value="testInsertedCorrectly" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ss.week3.test.PricedRoomTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,12 +176,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="ss.week3.test" />
       <option name="MAIN_CLASS_NAME" value="ss.week3.test.PricedSafeTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PricedSafeTest.testCorrectPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PricedSafeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SoftwareSystems2021" />
       <extension name="coverage">
         <pattern>
@@ -186,24 +193,29 @@
       </extension>
       <option name="PACKAGE_NAME" value="ss.week3.test" />
       <option name="MAIN_CLASS_NAME" value="ss.week3.test.PricedSafeTest" />
-      <option name="METHOD_NAME" value="testCorrectPassword" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PricedSafeTest.testIsBillItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PricedSafeTest2" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="SoftwareSystems2021" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ss.week3.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+        <pattern>
+          <option name="PATTERN" value="ss.week3.hotel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ss.week3.test" />
       <option name="MAIN_CLASS_NAME" value="ss.week3.test.PricedSafeTest" />
-      <option name="METHOD_NAME" value="testIsBillItem" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -226,31 +238,32 @@
     <list>
       <item itemvalue="Application.Hello" />
       <item itemvalue="JUnit.RoomTest" />
-      <item itemvalue="JUnit.BillTest" />
-      <item itemvalue="JUnit.BillTest.testInsertedCorrectly" />
-      <item itemvalue="JUnit.PricedSafeTest" />
-      <item itemvalue="JUnit.PricedSafeTest.testIsBillItem" />
-      <item itemvalue="JUnit.PricedSafeTest.testCorrectPassword" />
+      <item itemvalue="JUnit.PricedSafeTest2" />
+      <item itemvalue="JUnit.PricedRoomTest" />
+      <item itemvalue="JUnit.HotelTest" />
+      <item itemvalue="Application.HotelTUI" />
+      <item itemvalue="Application.TimedPassword" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PricedSafeTest" />
-        <item itemvalue="JUnit.PricedSafeTest.testCorrectPassword" />
-        <item itemvalue="JUnit.PricedSafeTest.testIsBillItem" />
-        <item itemvalue="JUnit.BillTest" />
-        <item itemvalue="JUnit.BillTest.testInsertedCorrectly" />
+        <item itemvalue="Application.TimedPassword" />
+        <item itemvalue="Application.HotelTUI" />
+        <item itemvalue="JUnit.HotelTest" />
+        <item itemvalue="JUnit.PricedRoomTest" />
+        <item itemvalue="JUnit.PricedSafeTest2" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d08c034f-b272-4375-9d3d-cce60d3ab3f6" name="Changes" comment="" />
+      <changelist id="3c2628cc-098d-41cc-be59-611f04274043" name="Changes" comment="" />
       <created>1636961743239</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636961743239</updated>
       <workItem from="1638351263390" duration="3572000" />
+      <workItem from="1638373791482" duration="21986000" />
     </task>
     <servers />
   </component>
@@ -273,8 +286,19 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SoftwareSystems2021$PricedSafeTest.ic" NAME="PricedSafeTest Coverage Results" MODIFIED="1638357339303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ss.week3.test.*</FILTER>
+      <FILTER>ss.week3.hotel.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/SoftwareSystems2021$HotelTest_testCheckoutOccupiedRoom.ic" NAME="HotelTest.testCheckoutOccupiedRoom Coverage Results" MODIFIED="1637832199518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ss.week2.test.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftwareSystems2021$PricedSafeTest2.ic" NAME="PricedSafeTest2 Coverage Results" MODIFIED="1638452536825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ss.week3.test.*</FILTER>
+      <FILTER>ss.week3.hotel.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SoftwareSystems2021$PricedSafeTest__1_.ic" NAME="PricedSafeTest (1) Coverage Results" MODIFIED="1638452472027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ss.week3.test.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/SoftwareSystems2021$ThreeWayLampTest.ic" NAME="ThreeWayLampTest Coverage Results" MODIFIED="1637071501595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ss.week1.test.*</FILTER>

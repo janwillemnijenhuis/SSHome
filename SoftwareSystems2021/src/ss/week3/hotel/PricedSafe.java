@@ -6,6 +6,16 @@ import ss.week3.password.Password;
 public class PricedSafe extends Safe implements Bill.Item{
     private double price;
     private Password password;
+
+    /**
+     * Main method
+     */
+    public static void main(String[] args) {
+        PricedSafe p = new PricedSafe(5.00);
+        String WRONG_PASSWORD = "wrongpassword123";
+        p.activate(WRONG_PASSWORD);
+    }
+
     /**
      * Constructor of priced safe
      */
@@ -16,9 +26,11 @@ public class PricedSafe extends Safe implements Bill.Item{
 
     /**
      * activates the safe if the pwd is correct
+     * @requires password to be correct
      * @param password the pwd
      */
     public void activate(String password) {
+        //assert this.password.testWord(password);
         if(this.password.testWord(password)) {
             super.activate();
         }
@@ -29,7 +41,7 @@ public class PricedSafe extends Safe implements Bill.Item{
      */
     @Override
     public void activate() {
-        System.out.println("Warning, safe not activated!");
+        System.err.print("Warning, safe not activated!\n");
     }
 
     /**
@@ -41,9 +53,13 @@ public class PricedSafe extends Safe implements Bill.Item{
 
     /**
      * Opens the safe if pwd is correct and safe is activated
+     * @requires password correct
+     * @requires safe is active
      * @param password the pwd
      */
     public void open(String password) {
+        //assert this.password.testWord(password) == true;
+        //assert super.isActive() == true;
         if(this.password.testWord(password) && super.isActive()) {
             super.open();
         }
@@ -53,7 +69,7 @@ public class PricedSafe extends Safe implements Bill.Item{
      * does not change the state of the safe
      */
     @Override
-    public void open() { }
+    public void open() { System.err.print("State of safe not changed\n");}
 
     /**
      * closes the safe

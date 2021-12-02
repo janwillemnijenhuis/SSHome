@@ -9,7 +9,11 @@ public class StringPrinter implements Printer {
         this.totalString += format(text, price);
     }
 
+    public void addLine(String text) {this.totalString += text;}
+
     public String getResult() {
-        return this.totalString;
+        String total = this.totalString;
+        this.totalString = "";
+        return total;
     }
 }

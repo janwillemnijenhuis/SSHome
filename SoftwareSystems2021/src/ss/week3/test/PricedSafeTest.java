@@ -4,13 +4,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ss.week3.bill.Bill;
 import ss.week3.hotel.PricedSafe;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 public class PricedSafeTest {
+    private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+    private final PrintStream originalErr = System.err;
 
     private PricedSafe safe;
     private static final double PRICE = 6.36;
@@ -27,6 +33,7 @@ public class PricedSafeTest {
         WRONG_PASSWORD = CORRECT_PASSWORD + "WRONG";
         assertFalse(safe.isActive());
         assertFalse(safe.isOpen());
+        System.setErr(new PrintStream(errContent));
     }
 
     @Test
@@ -58,5 +65,61 @@ public class PricedSafeTest {
         safe.activate(WRONG_PASSWORD);
         assertFalse(safe.isActive());
         assertFalse(safe.isOpen());
+    }
+
+    @Test
+    public void testDeactivatedCorrectPassword() throws Exception {
+        safe.deactivate();
+        safe.open(CORRECT_PASSWORD);
+        assertFalse(safe.isActive());
+        assertFalse(safe.isOpen());
+    }
+
+    @Test
+    public void testDeactivatedIncorrectPassword() throws Exception {
+        safe.deactivate();
+        safe.open(WRONG_PASSWORD);
+        assertFalse(safe.isActive());
+        assertFalse(safe.isOpen());
+    }
+
+    @Test
+    public void testActivatedCannotBeOpened() throws Exception {
+        safe.activate(CORRECT_PASSWORD);
+        safe.open(WRONG_PASSWORD);
+        assertFalse(safe.isOpen());
+        safe.open(CORRECT_PASSWORD);
+        assertTrue(safe.isActive());
+        assertTrue(safe.isOpen());
+    }
+
+    @Test
+    public void testActivatedCloseIsClosed() throws Exception {
+        safe.activate(CORRECT_PASSWORD);
+        safe.open(WRONG_PASSWORD);
+        safe.close();
+        assertTrue(safe.isActive());
+        assertFalse(safe.isOpen());
+    }
+
+    @Test
+    public void testDeactivatedCloseIsClosed() throws Exception {
+        safe.deactivate();
+        safe.close();
+        assertFalse(safe.isActive());
+        assertFalse(safe.isOpen());
+    }
+
+    @Test
+    public void testOpenWithoutInput() throws Exception{
+        safe.activate(CORRECT_PASSWORD);
+        safe.open();
+        assertEquals("State of safe not changed\n", errContent.toString());
+    }
+
+    @Test
+    public void testActivateWithoutInput() throws Exception{
+        safe.activate();
+        assertEquals("Warning, safe not activated!\n", errContent.toString());
     }
 }

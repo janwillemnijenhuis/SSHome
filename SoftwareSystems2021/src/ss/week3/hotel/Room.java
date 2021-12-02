@@ -1,7 +1,5 @@
 package ss.week3.hotel;
 
-import ss.week2.hotel.Guest;
-
 public class Room {
     private int number;
     private Guest guest;

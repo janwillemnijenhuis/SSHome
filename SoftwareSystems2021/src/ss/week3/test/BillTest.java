@@ -29,11 +29,11 @@ public class BillTest {
             this.price = price;
             this.text = text;
         }
-        @Override
+
         public double getPrice() {
             return this.price;
         }
-        @Override
+
         public String toString() {
             return this.text;
         }
