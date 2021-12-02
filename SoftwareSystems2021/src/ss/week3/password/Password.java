@@ -56,7 +56,7 @@ public class Password {
      * @param test: given password by user
      * @return true if password is correct
      */
-    public boolean testWord(String test) {
+    public boolean testWord(String test){
         if(test.equals(this.password)){
             return true;
         }
