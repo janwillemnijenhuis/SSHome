@@ -33,7 +33,8 @@ public class RoomTest {
 
     @Test
     public void testSafe() {
-        assertEquals(room.safe, room.getSafe());
+        room.getSafe().activate();
+        assertEquals(true, room.getSafe().isActive());
         // check if is deactivated and closed
     }
 }

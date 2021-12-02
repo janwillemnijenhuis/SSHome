@@ -4,10 +4,10 @@ import java.lang.Math;
 public class PairOfDice {
     private int die1;
     private int die2;
-    private static int rolls;
+    private int rolls;
 
     public PairOfDice() {
-        this.roll(); // rolls the dice for the first time
+        this.rolls = 0;
     }
 
     // rolls the dice after it has been rolled for a number of times, and shows two values.
@@ -21,6 +21,10 @@ public class PairOfDice {
         this.die1 = (int) (Math.random() * 6) + 1;
         this.die2 = (int) (Math.random() * 6) + 1;
         rolls += 1;
+    }
+
+    public int getSum() {
+        return this.die1 + this.die2;
     }
 
     public int getDie1() {
