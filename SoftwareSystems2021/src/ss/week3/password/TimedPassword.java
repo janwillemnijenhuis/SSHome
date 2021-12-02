@@ -17,6 +17,7 @@ public class TimedPassword extends Password {
         System.out.println(timedPass.testWord("newpass"));
         System.out.println(timedPass.testWord("wrongpass"));
         TimeUnit.SECONDS.sleep(9);
+        System.out.println("test");
 
     }
 
