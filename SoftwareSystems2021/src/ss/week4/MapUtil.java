@@ -7,11 +7,26 @@ import java.util.Set;
 
 public class MapUtil {
     public static <K, V> boolean isOneOnOne(Map<K, V> map) {
-         // TODO: implement, see exercise P-4.10
-         return false;
+        Set<K> keys;
+        Set<V> values = new HashSet<V>();
+        if (!map.isEmpty()) {
+            keys = map.keySet();
+            boolean first = true;
+            for (K k : keys) {
+                V v = map.get(k);
+                if (!first) {
+                    if (values.contains(v)) {
+                        return false;
+                    }
+                }
+                values.add(v);
+                first = false;
+            }
+        }
+        return true;
     }
-    
-    public static <K, V> boolean isSurjectiveOnRange(Map<K, V> map, Set<V> range) {
+
+        public static <K, V> boolean isSurjectiveOnRange(Map<K, V> map, Set<V> range) {
          // TODO: implement, see exercise P-4.11
          return false;
     }
