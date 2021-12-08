@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class MapUtil {
+    // check waarom kan ik dit niet zo kort doen als bij 4.13? containskey returned al true als er een key bestaat
     public static <K, V> boolean isOneOnOne(Map<K, V> map) {
         Set<K> keys;
         Set<V> values = new HashSet<V>();
@@ -26,9 +27,15 @@ public class MapUtil {
         return true;
     }
 
-        public static <K, V> boolean isSurjectiveOnRange(Map<K, V> map, Set<V> range) {
-         // TODO: implement, see exercise P-4.11
-         return false;
+    public static <K, V> boolean isSurjectiveOnRange(Map<K, V> map, Set<V> range) {
+        if (!map.isEmpty()) {
+            for (V v : range) {
+                if (!map.containsValue(v)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
     
     public static <K, V> Map<V, Set<K>> inverse(Map<K, V> map) {
