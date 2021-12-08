@@ -37,15 +37,41 @@ public class MapUtil {
         }
         return true;
     }
-    
+
+    // map should be injective
     public static <K, V> Map<V, Set<K>> inverse(Map<K, V> map) {
-         // TODO: implement, see exercise P-4.12
-         return null;
+        Map<V, Set<K>> inverse = new HashMap<>();
+        Set<V> values = new HashSet<V>(map.values());
+        Set<K> keys = new HashSet<K>(map.keySet());
+        if (!map.isEmpty()) {
+            for (V v : values) {
+                Set<K> valuekeys = new HashSet<K>();
+                for (K k : keys) {
+                    if (v == map.get(k)) {
+                        valuekeys.add(k);
+                    }
+                }
+                inverse.put(v, valuekeys);
+            }
+        }
+        return inverse;
     }
-    
+
+    // map should be injective and surjective
     public static <K, V> Map<V, K> inverseBijection(Map<K, V> map) {
-         // TODO: implement, see exercise P-4.12
-         return null;
+        Map<V, K> bijection = new HashMap<>();
+        Set<V> values = new HashSet<V>(map.values());
+        Set<K> keys = new HashSet<K>(map.keySet());
+        if (!map.isEmpty()) {
+            for (V v : values) {
+                for (K k : keys) {
+                    if (v == map.get(k)) {
+                        bijection.put(v, k);
+                    }
+                }
+            }
+        }
+        return bijection;
     }
 	
     public static <K, V, W> boolean compatible(Map<K, V> f, Map<V, W> g) {
