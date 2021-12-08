@@ -87,6 +87,7 @@ public class Game {
             playerMove = (playerMove + 1) % 2;
             this.update();
         }
+        printResult();
     }
 
     /**

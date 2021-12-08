@@ -138,12 +138,14 @@ public class Board {
      */
     //@ ensures (\forall int i; (i >= 0 && i < DIM*DIM); fields[i] == Mark.XX || fields[i] == Mark.OO);
     public boolean isFull() {
-        for (int i = 0; i < DIM * DIM; i++) {
-            if (isEmptyField(i)) {
-                return false;
+        int j = 0;
+        while(!(isEmptyField(j)) && j < DIM*DIM) {
+            j++;
+            if (j == DIM*DIM) {
+                return true;
             }
         }
-        return true;
+        return false;
     }
 
     /**

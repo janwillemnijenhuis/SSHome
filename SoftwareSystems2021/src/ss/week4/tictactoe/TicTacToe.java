@@ -9,7 +9,7 @@ public class TicTacToe {
             public int determineMove(Board board) {
                 int move;
                 do {
-                    move = (int) (Math.random() * 8);
+                    move = (int) (Math.random() * 9);
                 } while (!board.isEmptyField(move));
                 return move;
             }
@@ -19,11 +19,12 @@ public class TicTacToe {
             public int determineMove(Board board) {
                 int move;
                 do {
-                    move = (int) (Math.random() * 8);
+                    move = (int) (Math.random() * 9);
                 } while (!board.isEmptyField(move));
                 return move;
             }
         };
+
         Game game = new Game(p1, p2);
         game.start();
     }
