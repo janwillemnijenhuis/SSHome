@@ -44,4 +44,21 @@ public interface Calculator {
      * @throws DivideByZeroException if value a had value 0
      */
     void div() throws DivideByZeroException, StackEmptyException;
+
+    /**
+     * Take the value on top of the stack, and push this value again to the stack,
+     * the stack then has this value on top twice.
+     * @throws StackEmptyException if the stack does not have at least one value.
+     */
+    void dup() throws StackEmptyException;
+
+    /**
+     * Takes the upper two elements from the stack, and computes the remainder after dividing
+     * the second by the first element of the stack. If the first element was zero, push
+     * Double.NaN to the top of the stack.
+     * @throws DivideByZeroException if the first element is zero.
+     * @throws StackEmptyException if there are less than two elements in the stack.
+     * @return the remainder after division
+     */
+    void mod() throws DivideByZeroException, StackEmptyException;
 }

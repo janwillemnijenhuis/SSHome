@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import ss.calculator.Calculator;
 import ss.calculator.DivideByZeroException;
 import ss.calculator.StackEmptyException;
+import ss.calculator.implementation.ImplCalculatorFactory;
 //import ss.calculator.reference.MyCalculatorFactory;
 
 import java.util.ArrayList;
@@ -16,13 +17,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-@Disabled
 class CalculatorTest {
     private Calculator calculator;
 
     @BeforeEach
     void setup() {
-
+        this.calculator = new ImplCalculatorFactory().makeCalculator();
     }
 
     @Test
@@ -128,5 +128,35 @@ class CalculatorTest {
         calculator.div();
         assertEquals(100.0/6, calculator.pop());
         assertThrows(StackEmptyException.class, () -> calculator.pop()); // and test if stack now empty
+    }
+
+    @Test
+    void testDup() throws StackEmptyException {
+        // push 100 to the stack, and duplicate it
+        calculator.push(100);
+        calculator.dup();
+        // check that there is 100 on top of the stack twice
+        assertEquals(calculator.pop(), 100, 0.01);
+        assertEquals(calculator.pop(), 100, 0.01);
+        // assert that it throws a stackemptyexception
+        assertThrows(StackEmptyException.class, () -> calculator.pop()); // and test if stack now empty
+    }
+
+    @Test
+    void testMod() throws DivideByZeroException, StackEmptyException {
+        // push 100 and 5 to the stack, then push the remainder after division to the stack
+        calculator.push(100);
+        calculator.push(3);
+        calculator.mod();
+        // check if the result is 1
+        assertEquals(calculator.pop(), 1, 0.01);
+        assertThrows(StackEmptyException.class, () -> calculator.pop()); // and test if stack now empty
+        // now test if the stack throws dividebyzeroexception when dividing by 0
+        calculator.push(100);
+        calculator.push(0);
+        assertThrows(DivideByZeroException.class, () -> calculator.mod());
+        assertEquals(Double.NaN, calculator.pop());
+        // and check if its empty
+        assertThrows(StackEmptyException.class, () -> calculator.pop());
     }
 }
