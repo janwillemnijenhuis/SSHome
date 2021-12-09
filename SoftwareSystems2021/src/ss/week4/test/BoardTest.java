@@ -244,7 +244,6 @@ public class BoardTest {
         assertTrue(board.isWinner(Mark.OO));
     }
 
-    @Disabled
     @Test
     public void testHasNoWinnerFullBoard() {
         /**

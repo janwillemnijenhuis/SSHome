@@ -79,7 +79,6 @@ public class Game {
      * After each move, the changed game situation is printed.
      */
     private void play() {
-        this.reset();
         this.update();
         int playerMove = 0;
         while (!this.board.hasWinner() && !this.board.isFull()) {

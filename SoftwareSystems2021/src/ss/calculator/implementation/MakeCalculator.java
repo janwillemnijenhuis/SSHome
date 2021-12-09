@@ -4,45 +4,52 @@ import ss.calculator.Calculator;
 import ss.calculator.DivideByZeroException;
 import ss.calculator.StackEmptyException;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class MakeCalculator implements Calculator {
+    ArrayList<Double> calculatorArray;
     Stack<Double> calculatorStack;
-
+    // do it with an arraylist
     public MakeCalculator() {
-        this.calculatorStack= new Stack<Double>();
+        this.calculatorArray= new ArrayList<Double>();
     }
 
     @Override
     public void push(double value) {
-        this.calculatorStack.push(value);
+        // so value to leave first is at the end
+        this.calculatorArray.add(value);
     }
 
     @Override
     public double pop() throws StackEmptyException {
-        try {
-            return this.calculatorStack.pop();
-        } catch (Exception e) {
-            throw new StackEmptyException("No elements on the calculator");
+        if (calculatorArray.size() >= 1) {
+            double temp = this.calculatorArray.get(this.calculatorArray.size() - 1);
+            this.calculatorArray.remove(calculatorArray.size() - 1);
+            return temp;
+        } else {
+            throw new StackEmptyException("Stack is empty");
         }
     }
 
     @Override
     public void add() throws StackEmptyException {
-        try {
-            this.calculatorStack.push(this.calculatorStack.pop() + this.calculatorStack.pop());
-        } catch (Exception e) {
-            throw new StackEmptyException("Calculator is empty");
+        if (calculatorArray.size() >= 2) {
+            double first = pop();
+            double second = pop();
+            push(first + second);
+        } else {
+            throw new StackEmptyException("Stack contains not enough arguments");
         }
     }
 
     @Override
     public void sub() throws StackEmptyException {
-        try {
-            double first = this.calculatorStack.pop();
-            double second = this.calculatorStack.pop();
-            this.calculatorStack.push(second - first);
-        } catch (Exception e) {
+        if (this.calculatorArray.size() >= 2) {
+            double first = pop();
+            double second = pop();
+            push(second - first);
+        } else {
             throw new StackEmptyException("Calculator is empty");
         }
     }
@@ -50,7 +57,7 @@ public class MakeCalculator implements Calculator {
     @Override
     public void mult() throws StackEmptyException {
         try {
-            this.calculatorStack.push(this.calculatorStack.pop() * this.calculatorStack.pop());
+            push(pop() * pop());
         } catch (Exception e) {
             throw new StackEmptyException("Calculator is empty");
         }
@@ -61,26 +68,24 @@ public class MakeCalculator implements Calculator {
         double first;
         double second;
         try {
-            first = this.calculatorStack.pop();
-            second = this.calculatorStack.pop();
+            first = pop();
+            second = pop();
         } catch (Exception e) {
             throw new StackEmptyException("Not enough items");
         }
-        try {
-            // is dit zo goed? want met doubles kan je wel door nul delen
-            int div = (int) second / (int) first;
-            this.calculatorStack.push(second / first);
-        } catch (Exception e) {
-            this.calculatorStack.push(Double.NaN);
+        if (first != 0.0) {
+            push(second / first);
+        } else {
+            push(Double.NaN);
             throw new DivideByZeroException("Could not divide by zero");
         }
     }
 
     @Override
     public void dup() throws StackEmptyException {
-        try {
-            this.calculatorStack.push(this.calculatorStack.peek());
-        } catch (Exception e) {
+        if (this.calculatorArray.size() >= 1) {
+            push(this.calculatorArray.get(this.calculatorArray.size() - 1));
+        } else {
             throw new StackEmptyException("Stack is empty");
         }
     }
@@ -90,17 +95,15 @@ public class MakeCalculator implements Calculator {
         double first;
         double second;
         try {
-            first = this.calculatorStack.pop();
-            second = this.calculatorStack.pop();
+            first = pop();
+            second = pop();
         } catch (Exception e) {
             throw new StackEmptyException("Not enough items");
         }
-        try {
-            // is dit zo goed? want met doubles kan je wel door nul delen
-            int div = (int) second % (int) first;
-            this.calculatorStack.push(second % first);
-        } catch (Exception e) {
-            this.calculatorStack.push(Double.NaN);
+        if (first != 0) {
+            push(second % first);
+        } else {
+            push(Double.NaN);
             throw new DivideByZeroException("Could not divide by zero");
         }
     }

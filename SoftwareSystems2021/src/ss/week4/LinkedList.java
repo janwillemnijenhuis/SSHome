@@ -40,6 +40,7 @@ public class LinkedList<E> {
     }
 
     public Node findBefore(E element) {
+        // improve
         Node runner = this.first;
         E check = runner.getElement();
         int i = 0;

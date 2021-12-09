@@ -6,26 +6,32 @@ import ss.utils.TextIO;
 public class TicTacToe {
     public static void main(String[] args) {
         String[] names = checkArgs(args);
-        Player p1 = new Player(names[0], Mark.XX) {
-            @Override
-            public int determineMove(Board board) {
-                int move;
-                do {
-                    move = (int) (Math.random() * 9);
-                } while (!board.isEmptyField(move));
-                return move;
-            }
-        };
-        Player p2 = new Player(names[1], Mark.OO) {
-            @Override
-            public int determineMove(Board board) {
-                int move;
-                do {
-                    move = (int) (Math.random() * 9);
-                } while (!board.isEmptyField(move));
-                return move;
-            }
-        };
+
+        // uncomment below to play with humans
+        Player p1 = new HumanPlayer(names[0], Mark.XX);
+        Player p2 = new HumanPlayer(names[1], Mark.OO);
+
+        // uncomment below for cpus
+//        Player p1 = new Player(names[0], Mark.XX) {
+//            @Override
+//            public int determineMove(Board board) {
+//                int move;
+//                do {
+//                    move = (int) (Math.random() * 9);
+//                } while (!board.isEmptyField(move));
+//                return move;
+//            }
+//        };
+//        Player p2 = new Player(names[1], Mark.OO) {
+//            @Override
+//            public int determineMove(Board board) {
+//                int move;
+//                do {
+//                    move = (int) (Math.random() * 9);
+//                } while (!board.isEmptyField(move));
+//                return move;
+//            }
+//        };
 
         Game game = new Game(p1, p2);
         game.start();

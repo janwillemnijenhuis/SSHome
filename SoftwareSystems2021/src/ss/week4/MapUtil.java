@@ -31,11 +31,9 @@ public class MapUtil {
         ensures map.isEmpty() ==> \result == true;
     */
     public static <K, V> boolean isSurjectiveOnRange(Map<K, V> map, Set<V> range) {
-        if (!map.isEmpty()) {
-            for (V v : range) {
-                if (!map.containsValue(v)) {
-                    return false;
-                }
+        for (V v : range) {
+            if (!map.containsValue(v)) {
+                return false;
             }
         }
         return true;
@@ -48,16 +46,14 @@ public class MapUtil {
         Map<V, Set<K>> inverse = new HashMap<>();
         Set<V> values = new HashSet<V>(map.values());
         Set<K> keys = new HashSet<K>(map.keySet());
-        if (!map.isEmpty()) {
-            for (V v : values) {
-                Set<K> valuekeys = new HashSet<K>();
-                for (K k : keys) {
-                    if (v == map.get(k)) {
-                        valuekeys.add(k);
-                    }
+        for (V v : values) {
+            Set<K> valuekeys = new HashSet<K>();
+            for (K k : keys) {
+                if (v == map.get(k)) {
+                    valuekeys.add(k);
                 }
-                inverse.put(v, valuekeys);
             }
+            inverse.put(v, valuekeys);
         }
         return inverse;
     }
@@ -71,12 +67,10 @@ public class MapUtil {
         Map<V, K> bijection = new HashMap<>();
         Set<V> values = new HashSet<V>(map.values());
         Set<K> keys = new HashSet<K>(map.keySet());
-        if (!map.isEmpty()) {
-            for (V v : values) {
-                for (K k : keys) {
-                    if (v == map.get(k)) {
-                        bijection.put(v, k);
-                    }
+        for (V v : values) {
+            for (K k : keys) {
+                if (v == map.get(k)) {
+                    bijection.put(v, k);
                 }
             }
         }
