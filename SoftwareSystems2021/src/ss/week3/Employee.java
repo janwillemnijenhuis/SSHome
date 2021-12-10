@@ -9,11 +9,11 @@ public class Employee {
         this.payCalculator = payCalculator;
     }
 
-    public Employee() {
-
-    }
-
     public int hours() {
         return this.hours;
+    }
+
+    public int pay() {
+        return this.payCalculator.pay(hours(), payCalculator);
     }
 }
