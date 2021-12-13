@@ -1,5 +1,4 @@
 package ss.week4.tictactoe;
-
 import ss.utils.TextIO;
 
 /**

@@ -38,5 +38,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="commons-codec-1.15" level="project" />
   </component>
 </module>
