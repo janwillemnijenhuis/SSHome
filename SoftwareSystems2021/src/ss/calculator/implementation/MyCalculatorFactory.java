@@ -1,23 +1,22 @@
 package ss.calculator.implementation;
 
 import ss.calculator.Calculator;
-import ss.calculator.CalculatorFactory;
 import ss.calculator.CalculatorServer;
 import ss.calculator.StreamCalculator;
 
 import java.io.Reader;
 import java.io.Writer;
 
-public class ImplCalculatorFactory implements CalculatorFactory {
+public class MyCalculatorFactory implements ss.calculator.CalculatorFactory {
 
     @Override
     public Calculator makeCalculator() {
-        return new MakeCalculator();
+        return new MyCalculator();
     }
 
     @Override
     public StreamCalculator makeStreamCalculator(Calculator calculator) {
-        return null;
+        return new MyStreamCalculator(calculator);
     }
 
     @Override

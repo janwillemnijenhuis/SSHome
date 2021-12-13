@@ -1,5 +1,6 @@
 package ss.calculator;
 
+import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 
@@ -21,5 +22,5 @@ public interface StreamCalculator {
      * @param input the Reader to read commands from
      * @param output the Writer to write output to
      */
-    void process(Reader input, Writer output);
+    void process(Reader input, Writer output) throws IOException;
 }

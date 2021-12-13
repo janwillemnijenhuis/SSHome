@@ -7,11 +7,10 @@ import ss.calculator.StackEmptyException;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class MakeCalculator implements Calculator {
+public class MyCalculator implements Calculator {
     ArrayList<Double> calculatorArray;
-    Stack<Double> calculatorStack;
-    // do it with an arraylist
-    public MakeCalculator() {
+
+    public MyCalculator() {
         this.calculatorArray= new ArrayList<Double>();
     }
 

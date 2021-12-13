@@ -1,22 +1,20 @@
 package ss.calculator.test;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-import ss.calculator.CalculatorFactory;
+import ss.calculator.implementation.MyCalculatorFactory;
 
 import java.io.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 
-@Disabled
 class StreamCalculatorTest {
-    private CalculatorFactory factory;
+    private MyCalculatorFactory factory;
 
     @BeforeEach
     void setup() {
-
+        this.factory = new MyCalculatorFactory();
     }
 
     /**
@@ -27,7 +25,7 @@ class StreamCalculatorTest {
         var calculator = factory.makeCalculator();
         var streamCalculator = factory.makeStreamCalculator(calculator);
 
-        try (var fr = new FileReader("src/ss/calculator/test/calculatorinstructions")) {
+        try (var fr = new FileReader("C:\\Users\\janwillem.nijenhuis\\Documents\\SSHome\\SoftwareSystems2021\\src\\ss\\calculator\\test\\calculatorinstructions")) {
             // stringwriter! Basically writes to a string
             var sw = new StringWriter();
             streamCalculator.process(fr, sw);

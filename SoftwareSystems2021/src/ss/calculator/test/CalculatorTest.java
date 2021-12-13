@@ -1,12 +1,11 @@
 package ss.calculator.test;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ss.calculator.Calculator;
 import ss.calculator.DivideByZeroException;
 import ss.calculator.StackEmptyException;
-import ss.calculator.implementation.ImplCalculatorFactory;
+import ss.calculator.implementation.MyCalculatorFactory;
 //import ss.calculator.reference.MyCalculatorFactory;
 
 import java.util.ArrayList;
@@ -22,7 +21,7 @@ class CalculatorTest {
 
     @BeforeEach
     void setup() {
-        this.calculator = new ImplCalculatorFactory().makeCalculator();
+        this.calculator = new MyCalculatorFactory().makeCalculator();
     }
 
     @Test

@@ -1,7 +1,5 @@
 package ss.week4;
 
-import ss.calculator.implementation.MakeCalculator;
-
 public class TransposeFunction {
 
     public static void main(String[] args) {
