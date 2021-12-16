@@ -24,6 +24,7 @@ public class MyStreamCalculator implements StreamCalculator {
                 double number = 0;
                 if (line.equals("")) {
                     pw.write("error: empty line not allowed\n");
+                    continue;
                 }
                 if (line.contains(" ")) {
                     String[] contents = line.split(" ");
@@ -76,6 +77,6 @@ public class MyStreamCalculator implements StreamCalculator {
         }
         // i now add it here to ensure user doesnt go to far, does that make sense? edit - or should i do null
         pw.write("error: the stack is empty\n");
-        pw.flush();
+        pw.close();
     }
 }
