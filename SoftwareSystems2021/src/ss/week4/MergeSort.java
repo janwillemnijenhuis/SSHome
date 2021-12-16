@@ -6,6 +6,8 @@ import java.util.List;
 
 public class MergeSort {
 
+	public MergeSort() {}
+
 	public static void main(String[] args) {
 		List<Integer> ls = new ArrayList<>(Arrays.asList(0, 1, 4, 3, 6, 8));
 		List<Integer> newlist = mergeSort(ls);
