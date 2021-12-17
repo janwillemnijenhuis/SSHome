@@ -1,9 +1,11 @@
 these
 are
-a
-few
-words
+the
+lines
+we
+wish
 to
-test
-our
-program
+sort
+sort
+lines
+to

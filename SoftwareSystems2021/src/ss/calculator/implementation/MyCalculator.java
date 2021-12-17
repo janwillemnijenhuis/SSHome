@@ -3,9 +3,7 @@ package ss.calculator.implementation;
 import ss.calculator.Calculator;
 import ss.calculator.DivideByZeroException;
 import ss.calculator.StackEmptyException;
-
 import java.util.ArrayList;
-import java.util.Stack;
 
 public class MyCalculator implements Calculator {
     ArrayList<Double> calculatorArray;
