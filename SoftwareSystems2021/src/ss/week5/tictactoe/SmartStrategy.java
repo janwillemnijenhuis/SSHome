@@ -3,7 +3,7 @@ package ss.week5.tictactoe;
 import ss.week4.tictactoe.Board;
 import ss.week4.tictactoe.Mark;
 
-public class SmartStrategy extends NaiveStrategy implements Strategy {
+public class SmartStrategy implements Strategy {
     NaiveStrategy naiveStrategy = new NaiveStrategy();
     @Override
     public String getName() {

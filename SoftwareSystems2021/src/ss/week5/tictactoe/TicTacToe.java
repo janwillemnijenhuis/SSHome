@@ -6,11 +6,7 @@ import ss.week4.tictactoe.*;
 public class TicTacToe {
     public static void main(String[] args) {
         Player[] players = new Player[2];
-        // moeten de players allemaal in dezelfde map staan? nu moet ik ze deze assignment geven
-        // of ligt het eraan dat ik eerst alles van week 4 geimport had
 
-        players[1] = new HumanPlayer("test", Mark.XX);
-        players[0] = new ComputerPlayer(Mark.OO);
         Mark[] marks = {Mark.XX, Mark.OO};
         String[] names = checkArgs(args);
 
@@ -20,6 +16,8 @@ public class TicTacToe {
                 players[i] = new ComputerPlayer(marks[i]);
             } else if (names[i].equals("-S")) {
                 players[i] = new ComputerPlayer(marks[i], new SmartStrategy());
+            } else if (names[i].equals("-P")) {
+                players[i] = new ComputerPlayer(marks[i], new PerfectStrategy());
             } else {
                 players[i] = new HumanPlayer(names[i], marks[i]);
             }

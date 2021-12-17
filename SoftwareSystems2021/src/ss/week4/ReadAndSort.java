@@ -1,7 +1,6 @@
 package ss.week4;
 
 import java.io.*;
-import java.util.ArrayList;
 
 public class ReadAndSort {
 
