@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import ss.week6.dictionaryattack.DictionaryAttack;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
 
@@ -49,6 +50,16 @@ public class DictionaryAttackTest {
     @Test
     public void testCheckPassword() throws NoSuchAlgorithmException {
         assertTrue(dictionaryAttack.checkPassword("katrine", "spongebob"));
+    }
+
+    @Test
+    public void testDirectoryList() throws NoSuchAlgorithmException {
+        try {
+            dictionaryAttack.addToHashDictionary(PATH + "\\MostCommonPasswords.txt");
+        } catch (FileNotFoundException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        assertEquals("mustang", dictionaryAttack.getDictionaryValue(dictionaryAttack.getPasswordHash("mustang")));
     }
 
 }
