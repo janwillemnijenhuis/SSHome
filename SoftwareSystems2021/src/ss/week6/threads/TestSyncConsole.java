@@ -1,24 +1,37 @@
 package ss.week6.threads;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class TestSyncConsole implements Runnable {
+    ReentrantLock re;
+
+    public TestSyncConsole(ReentrantLock re) {
+        this.re = re;
+    }
+
     @Override
     public void run() {
         sum();
     }
 
     private synchronized void sum() {
-        int num1 = SyncConsole.readInt(Thread.currentThread().getName() + ": get number 1? ");
-        int num2 = SyncConsole.readInt(Thread.currentThread().getName() + ": get number 2? ");
-        int sum = num1 + num2;
-        SyncConsole.println(Thread.currentThread().getName() + ": " + num1 + " + " + num2 + " = " + sum);
+        try {
+            re.lock();
+            int num1 = SyncConsole.readInt(Thread.currentThread().getName() + ": get number 1? ");
+            int num2 = SyncConsole.readInt(Thread.currentThread().getName() + ": get number 2? ");
+            int sum = num1 + num2;
+            SyncConsole.println(Thread.currentThread().getName() + ": " + num1 + " + " + num2 + " = " + sum);
+        } finally {
+            re.unlock();
+        }
     }
 
     public static void main(String[] args) throws InterruptedException {
-        TestSyncConsole t = new TestSyncConsole();
-        Thread t1 = new Thread(new TestSyncConsole(), "Thread A");
-        Thread t2 = new Thread(new TestSyncConsole(), "Thread B");
+        ReentrantLock re = new ReentrantLock();
+        Thread t1 = new Thread(new TestSyncConsole(re), "Thread A");
+        Thread t2 = new Thread(new TestSyncConsole(re), "Thread B");
         t1.start();
-        t1.join();
+//        t1.join();
         t2.start();
         /// Exercise 6.11 ///
         // they are not processed in the same order, first B1, A1, A2, B2
