@@ -1,6 +1,7 @@
 package ss.calculator.implementation;
 
 import ss.calculator.Calculator;
+import ss.calculator.DivideByZeroException;
 import ss.calculator.StackEmptyException;
 import ss.calculator.StreamCalculator;
 
@@ -16,14 +17,14 @@ public class MyStreamCalculator implements StreamCalculator {
     @Override
     public void process(Reader input, Writer output) throws IOException {
         BufferedReader br = new BufferedReader(input);
-        PrintWriter pw = new PrintWriter(output);
+        PrintWriter pw = new PrintWriter(output, true);
         String line = null;
         try {
             while ((line = br.readLine()) != null) {
                 String command;
                 double number = 0;
                 if (line.equals("")) {
-                    pw.write("error: empty line not allowed\n");
+                    pw.println("error: empty line not allowed");
                     continue;
                 }
                 if (line.contains(" ")) {
@@ -38,17 +39,17 @@ public class MyStreamCalculator implements StreamCalculator {
                         if (line.split(" ").length == 2) {
                             this.calculator.push(number);
                         } else {
-                            pw.write("error: this operation is not allowed\n");
+                            pw.println("error: this operation is not allowed");
                         }
                         break;
                     case "pop":
-                        pw.write(String.valueOf(this.calculator.pop()) + "\n");
+                        pw.println(this.calculator.pop());
                         break;
                     case "add":
                         try {
                             this.calculator.add();
                         } catch (StackEmptyException e) {
-                            pw.write("error: stack is empty\n");
+                            pw.println("error: stack is empty");
                         }
                         break;
                     case "sub":
@@ -67,16 +68,16 @@ public class MyStreamCalculator implements StreamCalculator {
                         this.calculator.mod();
                         break;
                     default:
-                        pw.write("error: invalid command\n");
+                        pw.println("error: invalid command");
                         break;
                 }
             }
             br.close();
-        } catch (Exception e) {
-            //throw new IOException();
+        } catch (StackEmptyException | IOException | NumberFormatException | DivideByZeroException e) {
+            pw.println(e.getMessage());
         }
         // i now add it here to ensure user doesnt go to far, does that make sense? edit - or should i do null
-        pw.write("error: the stack is empty\n");
+        pw.println("error: the stack is empty");
         pw.close();
     }
 }

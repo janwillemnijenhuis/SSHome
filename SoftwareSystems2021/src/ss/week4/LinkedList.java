@@ -11,6 +11,10 @@ public class LinkedList<E> {
         first = null;
     }
 
+    public Node getFirst() {
+        return this.first;
+    }
+
     public void add(int index, E element) {
         Node newNode = new Node(element);
         if (index == 0) {
@@ -37,6 +41,19 @@ public class LinkedList<E> {
             this.first = this.first.next;
         }
         this.size -= 1;
+    }
+
+    public int find(E element) {
+        Node runner = this.first;
+        int i = 0;
+        while (runner.getElement() != element) {
+            runner = runner.next;
+            if (runner == null) {
+                return -1;
+            }
+            i++;
+        }
+        return i;
     }
 
     public Node findBefore(E element) {

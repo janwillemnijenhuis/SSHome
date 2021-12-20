@@ -3,9 +3,7 @@ package ss.calculator.implementation;
 import ss.calculator.Calculator;
 import ss.calculator.DivideByZeroException;
 import ss.calculator.StackEmptyException;
-
 import java.util.ArrayList;
-import java.util.Stack;
 
 public class MyCalculator implements Calculator {
     ArrayList<Double> calculatorArray;
@@ -27,7 +25,7 @@ public class MyCalculator implements Calculator {
             this.calculatorArray.remove(calculatorArray.size() - 1);
             return temp;
         } else {
-            throw new StackEmptyException("Stack is empty");
+            throw new StackEmptyException("error: stack is empty");
         }
     }
 
@@ -38,7 +36,7 @@ public class MyCalculator implements Calculator {
             double second = pop();
             push(first + second);
         } else {
-            throw new StackEmptyException("Stack contains not enough arguments");
+            throw new StackEmptyException("error: stack contains not enough arguments");
         }
     }
 
@@ -49,7 +47,7 @@ public class MyCalculator implements Calculator {
             double second = pop();
             push(second - first);
         } else {
-            throw new StackEmptyException("Calculator is empty");
+            throw new StackEmptyException("error: calculator is empty");
         }
     }
 
@@ -58,7 +56,7 @@ public class MyCalculator implements Calculator {
         try {
             push(pop() * pop());
         } catch (Exception e) {
-            throw new StackEmptyException("Calculator is empty");
+            throw new StackEmptyException("error: calculator is empty");
         }
     }
 
@@ -70,13 +68,13 @@ public class MyCalculator implements Calculator {
             first = pop();
             second = pop();
         } catch (Exception e) {
-            throw new StackEmptyException("Not enough items");
+            throw new StackEmptyException("error: not enough items");
         }
         if (first != 0.0) {
             push(second / first);
         } else {
             push(Double.NaN);
-            throw new DivideByZeroException("Could not divide by zero");
+            throw new DivideByZeroException("error: could not divide by zero");
         }
     }
 
@@ -85,7 +83,7 @@ public class MyCalculator implements Calculator {
         if (this.calculatorArray.size() >= 1) {
             push(this.calculatorArray.get(this.calculatorArray.size() - 1));
         } else {
-            throw new StackEmptyException("Stack is empty");
+            throw new StackEmptyException("error: stack is empty");
         }
     }
 
@@ -97,13 +95,13 @@ public class MyCalculator implements Calculator {
             first = pop();
             second = pop();
         } catch (Exception e) {
-            throw new StackEmptyException("Not enough items");
+            throw new StackEmptyException("error: not enough items");
         }
         if (first != 0) {
             push(second % first);
         } else {
             push(Double.NaN);
-            throw new DivideByZeroException("Could not divide by zero");
+            throw new DivideByZeroException("error: could not divide by zero");
         }
     }
 }

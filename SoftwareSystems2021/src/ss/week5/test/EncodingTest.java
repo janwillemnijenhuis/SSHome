@@ -41,7 +41,7 @@ public class EncodingTest {
             Arrays.fill(charArray, 'a');
             // is this useless? can we do this with just chars
             String str = String.valueOf(charArray);
-            byte[] numberA = Base64.encodeBase64(str.getBytes());
+            String numberA = Base64.encodeBase64String(str.getBytes());
             System.out.println(String.valueOf(i) + ": " + numberA);
         }
 
