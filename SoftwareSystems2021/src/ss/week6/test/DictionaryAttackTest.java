@@ -8,7 +8,9 @@ import org.junit.jupiter.api.BeforeEach;
 
 import ss.week6.dictionaryattack.DictionaryAttack;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * Test program for DictionaryAttack.
@@ -22,13 +24,13 @@ public class DictionaryAttackTest {
     private DictionaryAttack dictionaryAttack;
 
     /** Path to the text file */
-    private static final String PATH = "./src/ss/week6/test/"; // Path to the test folder
+    private static final String PATH = "C:\\Users\\janwillem.nijenhuis\\Documents\\SSHome\\SoftwareSystems2021\\src\\ss\\week6\\test"; // Path to the test folder
 
     @BeforeEach
     public void setUp() {
         dictionaryAttack = new DictionaryAttack();
         try {
-            dictionaryAttack.readPasswords(PATH + "LeakedPasswords.txt");
+            dictionaryAttack.readPasswords(PATH + "\\LeakedPasswords.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -38,7 +40,7 @@ public class DictionaryAttackTest {
      * Test for <tt>getPasswordHash</tt>
      */
     @Test
-    public void testGetPasswordHash() {
+    public void testGetPasswordHash() throws NoSuchAlgorithmException {
         assertEquals("5f4dcc3b5aa765d61d8327deb882cf99", dictionaryAttack.getPasswordHash("password"));
     }
 
@@ -46,8 +48,18 @@ public class DictionaryAttackTest {
      * Test for <tt>checkPassword</tt>
      */
     @Test
-    public void testCheckPassword() {
+    public void testCheckPassword() throws NoSuchAlgorithmException {
         assertTrue(dictionaryAttack.checkPassword("katrine", "spongebob"));
+    }
+
+    @Test
+    public void testDirectoryList() throws NoSuchAlgorithmException {
+        try {
+            dictionaryAttack.addToHashDictionary(PATH + "\\MostCommonPasswords.txt");
+        } catch (FileNotFoundException | NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        assertEquals("mustang", dictionaryAttack.getDictionaryValue(dictionaryAttack.getPasswordHash("mustang")));
     }
 
 }

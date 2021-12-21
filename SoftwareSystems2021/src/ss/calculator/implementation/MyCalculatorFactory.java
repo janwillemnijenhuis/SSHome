@@ -21,7 +21,7 @@ public class MyCalculatorFactory implements ss.calculator.CalculatorFactory {
 
     @Override
     public Runnable makeRunnableStreamCalculator(Reader reader, Writer writer) {
-        return null;
+        return new MyRunnableStreamCalculator(reader, writer);
     }
 
     @Override

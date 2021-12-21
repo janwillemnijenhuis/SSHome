@@ -3,6 +3,7 @@ package ss.week6.test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ss.calculator.CalculatorFactory;
+import ss.calculator.implementation.MyCalculatorFactory;
 
 import java.io.*;
 import java.time.Duration;
@@ -15,7 +16,7 @@ class RunnableCalculatorTest {
 
     @BeforeEach
     void setup() {
-         factory = null; // replace with your own implementation of the factory
+         factory = new MyCalculatorFactory();
     }
 
     @Test
