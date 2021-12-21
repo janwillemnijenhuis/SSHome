@@ -31,7 +31,7 @@ public class TestSyncConsole implements Runnable {
         Thread t1 = new Thread(new TestSyncConsole(re), "Thread A");
         Thread t2 = new Thread(new TestSyncConsole(re), "Thread B");
         t1.start();
-//        t1.join();
+       // t1.join();
         t2.start();
         /// Exercise 6.11 ///
         // they are not processed in the same order, first B1, A1, A2, B2

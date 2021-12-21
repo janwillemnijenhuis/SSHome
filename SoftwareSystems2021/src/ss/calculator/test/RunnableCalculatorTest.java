@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ss.calculator.CalculatorFactory;
+import ss.calculator.implementation.MyCalculatorFactory;
 
 import java.io.*;
 import java.time.Duration;
@@ -18,7 +19,7 @@ class RunnableCalculatorTest {
 
     @BeforeEach
     void setup() {
-
+        factory = new MyCalculatorFactory();
     }
 
     @Test
