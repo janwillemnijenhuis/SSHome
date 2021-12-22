@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 import ss.week6.QuickSort;
 
+import java.util.concurrent.ForkJoinPool;
+
 public class QuickSortTest {
 
     @Test
@@ -29,9 +31,15 @@ public class QuickSortTest {
                 574, 571, 922, 471, 99, 550, 97, 388, 893, 289, 849, 618, 88, 514, 721, 837, 860, 222, 514, 126, 892};
 
         // Change below three lines to test your own multi threaded version
-        QuickSort.qsort(a1);
-        QuickSort.qsort(a2);
-        QuickSort.qsort(a3);
+        QuickSort q1 = new QuickSort(a1);
+        ForkJoinPool pool1 = new ForkJoinPool();
+        QuickSort q2 = new QuickSort(a2);
+        ForkJoinPool pool2 = new ForkJoinPool();
+        QuickSort q3 = new QuickSort(a3);
+        ForkJoinPool pool3 = new ForkJoinPool();
+        pool1.invoke(q1);
+        pool2.invoke(q2);
+        pool3.invoke(q3);
 
         assertArrayEquals(
                 new int[]{5, 24, 28, 33, 48, 59, 59, 66, 78, 90, 97, 99, 112, 144, 144, 146, 147, 147, 149, 153, 154,

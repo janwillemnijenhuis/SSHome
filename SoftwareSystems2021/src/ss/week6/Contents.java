@@ -19,11 +19,14 @@ public class Contents {
         a1.start();
         a2.start();
         // commenting the lines from the try-catch results in two thread not waiting for each other and performing 0+2 and 0+1
-        try {
-            a1.join();
-            a2.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+//        try {
+//            a1.join();
+//            a2.join();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        while (a1.isAlive() || a2.isAlive()) {
+            //wait
         }
         System.out.println(cell.get());
     }
@@ -38,6 +41,8 @@ class Adder implements Runnable {
         this.amount = amountArg;
     }
     public void run() {
-        cell.add(amount);
+        synchronized (this.cell) {
+            cell.add(amount);
+        }
     }
 }

@@ -8,7 +8,7 @@ public class SynchronizedIntCell implements IntCell {
     private int value = 0;
 
     @Override
-    public synchronized void setValue(int val) {
+    synchronized public void setValue(int val) {
         while (containsValue) {
             try {
                 wait();
