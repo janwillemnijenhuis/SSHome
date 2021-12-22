@@ -9,7 +9,7 @@ public class Account {
 	private boolean inTransaction = false;
 	private Lock lock = new ReentrantLock();
 
-	public synchronized void transaction(double amount) {
+	synchronized public void transaction(double amount) {
 		try {
 			while (inTransaction) {
 				wait();
@@ -26,7 +26,7 @@ public class Account {
 		this.inTransaction = false;
 	}
 
-	public synchronized double getBalance() {
+	synchronized public double getBalance() {
 		return balance;
 	}
 }
