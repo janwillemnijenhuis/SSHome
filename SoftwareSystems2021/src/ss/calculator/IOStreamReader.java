@@ -4,7 +4,7 @@ import ss.calculator.implementation.MyCalculatorFactory;
 import java.io.*;
 
 public class IOStreamReader {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         MyCalculatorFactory calculatorFactory = new MyCalculatorFactory();
         Calculator calculator = calculatorFactory.makeCalculator();

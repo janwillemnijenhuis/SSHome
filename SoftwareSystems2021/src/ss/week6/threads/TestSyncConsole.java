@@ -14,15 +14,17 @@ public class TestSyncConsole implements Runnable {
         sum();
     }
 
-    private synchronized void sum() {
+    private void sum() {
         try {
-            re.lock();
-            int num1 = SyncConsole.readInt(Thread.currentThread().getName() + ": get number 1? ");
-            int num2 = SyncConsole.readInt(Thread.currentThread().getName() + ": get number 2? ");
-            int sum = num1 + num2;
-            SyncConsole.println(Thread.currentThread().getName() + ": " + num1 + " + " + num2 + " = " + sum);
+            synchronized (System.in) {
+//            re.lock();
+                int num1 = SyncConsole.readInt(Thread.currentThread().getName() + ": get number 1? ");
+                int num2 = SyncConsole.readInt(Thread.currentThread().getName() + ": get number 2? ");
+                int sum = num1 + num2;
+                SyncConsole.println(Thread.currentThread().getName() + ": " + num1 + " + " + num2 + " = " + sum);
+            }
         } finally {
-            re.unlock();
+//            re.unlock();
         }
     }
 

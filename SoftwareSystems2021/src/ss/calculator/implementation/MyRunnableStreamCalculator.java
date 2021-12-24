@@ -27,6 +27,8 @@ public class MyRunnableStreamCalculator implements Runnable {
             streamCalculator.process(this.reader, this.writer);
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }

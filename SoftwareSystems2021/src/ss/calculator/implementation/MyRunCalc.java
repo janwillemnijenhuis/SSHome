@@ -3,9 +3,10 @@ package ss.calculator.implementation;
 import ss.calculator.CalculatorFactory;
 
 import java.io.*;
+import java.util.concurrent.TimeUnit;
 
 public class MyRunCalc {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         CalculatorFactory calculatorFactory = new MyCalculatorFactory(); // create a new calculatorfactory
 
@@ -22,7 +23,7 @@ public class MyRunCalc {
         thread.start(); // start the thread
 
         String line; // init empty string to put line from I/O in
-        while ((line = br.readLine()) != null && !line.equals("quit")) {
+        while ((line = br.readLine()) != null) {
             // check if line is not null and line does not equal quit, otherwise terminate
             pw.println(line); // print the line towards the calculator
         }

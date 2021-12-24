@@ -37,6 +37,8 @@ class StreamCalculatorTest {
                 assertEquals("400.0", br.readLine());
                 assertEquals("0.025", br.readLine());
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -44,7 +46,7 @@ class StreamCalculatorTest {
      * Test if a the streamCalculator handles a closed output stream
      */
     @Test
-    void closedWriterTest() throws IOException {
+    void closedWriterTest() throws IOException, InterruptedException {
         var calculator = factory.makeCalculator();
         var streamCalculator = factory.makeStreamCalculator(calculator);
 
@@ -86,6 +88,8 @@ class StreamCalculatorTest {
             String s = br.readLine();
             assertNotNull(s);
             assertTrue(s.startsWith("error: "));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -111,6 +115,8 @@ class StreamCalculatorTest {
             String s = br.readLine();
             assertNotNull(s);
             assertTrue(s.startsWith("error: "));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -136,6 +142,8 @@ class StreamCalculatorTest {
             String s = br.readLine();
             assertNotNull(s);
             assertTrue(s.startsWith("error: "));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -160,6 +168,8 @@ class StreamCalculatorTest {
             String s = br.readLine();
             assertNotNull(s);
             assertTrue(s.startsWith("error: "));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -190,6 +200,8 @@ class StreamCalculatorTest {
             s = br.readLine();
             assertNotNull(s);
             assertTrue(s.startsWith("error: "));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -218,6 +230,8 @@ class StreamCalculatorTest {
             s = br.readLine();
             assertNotNull(s);
             assertTrue(s.startsWith("error: "));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -225,7 +239,7 @@ class StreamCalculatorTest {
      * Test if sub() on an empty stack results in an error message
      */
     @Test
-    void emptyStackTestSub() throws IOException {
+    void emptyStackTestSub() throws IOException, InterruptedException {
         var calculator = factory.makeCalculator();
         var streamCalculator = factory.makeStreamCalculator(calculator);
 
@@ -274,6 +288,8 @@ class StreamCalculatorTest {
             s = br.readLine();
             assertNotNull(s);
             assertTrue(s.startsWith("error: "));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
@@ -281,7 +297,7 @@ class StreamCalculatorTest {
      * Test if div() on an empty stack results in an error message
      */
     @Test
-    void emptyStackTestDiv() throws IOException {
+    void emptyStackTestDiv() throws IOException, InterruptedException {
         var calculator = factory.makeCalculator();
         var streamCalculator = factory.makeStreamCalculator(calculator);
 

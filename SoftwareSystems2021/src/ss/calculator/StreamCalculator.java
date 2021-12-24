@@ -22,5 +22,5 @@ public interface StreamCalculator {
      * @param input the Reader to read commands from
      * @param output the Writer to write output to
      */
-    void process(Reader input, Writer output) throws IOException;
+    void process(Reader input, Writer output) throws IOException, InterruptedException;
 }

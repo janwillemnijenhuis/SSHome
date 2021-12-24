@@ -12,6 +12,7 @@ public class FineGrainedCell implements IntCell {
     private Condition Full = lock.newCondition();
     private Condition Empty = lock.newCondition();
     private boolean containsValue = false;
+    public ArrayList<Integer> values = new ArrayList<>();
 
     @Override
     public void setValue(int val) {
@@ -22,6 +23,7 @@ public class FineGrainedCell implements IntCell {
             }
             this.value = val;
             this.containsValue = true;
+            values.add(val);
             Full.signal();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -38,6 +40,8 @@ public class FineGrainedCell implements IntCell {
                 Full.await();
             }
             this.containsValue = false;
+            values.add(-this.value);
+            System.out.println(values);
             Empty.signal();
         } catch (InterruptedException e) {
             e.printStackTrace();

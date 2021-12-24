@@ -60,6 +60,7 @@ public class DictionaryAttack {
 	 * @return whether the password for that user was correct.
 	 */
 	public boolean checkPassword(String user, String password) throws NoSuchAlgorithmException {
+		// check of user exists
 		return passwordMap.get(user).equals(getPasswordHash(password));
 	}
 
@@ -113,6 +114,7 @@ public class DictionaryAttack {
 				}
 				tempPassword = sb.toString();
 			} while (triedPasswords.contains(tempPassword));
+			triedPasswords.add(tempPassword);
 			String tempHash = getPasswordHash(tempPassword);
 			if (tempHash.equals(hash)) {
 				System.out.format("username: %s => password: %s\n", user, tempPassword);
