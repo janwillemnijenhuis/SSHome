@@ -84,8 +84,8 @@ public class MyStreamCalculator implements StreamCalculator {
             pw.println("terminating...");
         } finally {
             pw.close();
-            TimeUnit.SECONDS.sleep(3);
-            //System.exit(0);
+            TimeUnit.SECONDS.sleep(1);
+            return;
         }
     }
 }

@@ -42,19 +42,13 @@ public class MyCalculatorServer implements CalculatorServer, Runnable {
     @Override
     public void run() {
         boolean run = true;
-        int threadCount = 0;
         while (run) {
             try {
                 Socket socket = ss.accept();
                 MyClientHandler ch = new MyClientHandler(socket);
-
-                threadCount += 1;
                 handlers.add(ch);
-
                 new Thread(ch).start();
-
             } catch (IOException e) {
-                System.out.println("Currently " + threadCount + " threads open, closing all...");
                 System.out.println("Terminated server at port: " + this.ss.getLocalPort());
                 run = false;
             }
