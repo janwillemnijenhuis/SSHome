@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ss.week7.chat.server.ChatServer;
+import ss.week7.chat.server.MyChatServer;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -19,8 +20,7 @@ public class ServerTest {
 
     @BeforeEach
     void setUp() throws IOException {
-        // FIXME use your own server implementation here
-        //  server = new Server(0);
+        this.server = new MyChatServer(0);
     }
 
     @Test

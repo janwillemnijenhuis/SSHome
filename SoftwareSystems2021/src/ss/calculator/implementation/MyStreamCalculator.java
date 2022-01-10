@@ -85,7 +85,7 @@ public class MyStreamCalculator implements StreamCalculator {
         } finally {
             pw.close();
             TimeUnit.SECONDS.sleep(3);
-            System.exit(0);
+            //System.exit(0);
         }
     }
 }
