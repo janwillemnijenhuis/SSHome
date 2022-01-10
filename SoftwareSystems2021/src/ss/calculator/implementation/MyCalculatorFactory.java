@@ -26,6 +26,6 @@ public class MyCalculatorFactory implements ss.calculator.CalculatorFactory {
 
     @Override
     public CalculatorServer makeCalculatorServer() {
-        return null;
+        return new MyCalculatorServer();
     }
 }

@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ss.calculator.CalculatorServer;
+import ss.calculator.implementation.MyCalculatorFactory;
 
 import java.io.*;
 import java.net.InetAddress;
@@ -12,13 +13,13 @@ import java.net.Socket;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-@Disabled
 class CalculatorServerTest {
     private CalculatorServer server;
 
     @BeforeEach
     void setup() {
-
+        MyCalculatorFactory myCalculatorFactory = new MyCalculatorFactory();
+        this.server = myCalculatorFactory.makeCalculatorServer();
     }
 
     /**
