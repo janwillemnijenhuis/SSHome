@@ -36,6 +36,7 @@ public class Chat implements ChatListener {
         while (!(line = TextIO.getlnString()).equals("quit")) {
             client.sendMessage(line);
         }
+        client.sendMessage("left the chat");
         System.out.println("Exiting...");
         client.close();
     }

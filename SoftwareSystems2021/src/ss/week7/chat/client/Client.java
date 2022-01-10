@@ -51,6 +51,7 @@ public class Client implements ChatClient, Runnable {
     public boolean sendUsername(String username) {
         try {
             out.println(username);
+            this.sendMessage("joined the chat.");
         } catch (Exception e) {
             this.close();
             return false;
